@@ -14,7 +14,7 @@ export const counterContract = {
     .output(z.number()),
   decrementCounter: oc
     .route({
-      method: "GET",
+      method: "GET" ,
     })
     .output(z.number()),
   resetCounter: oc
