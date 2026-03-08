@@ -1,6 +1,7 @@
 import { httpContract } from "@fullstack-template/contracts";
 import { createORPCClient } from "@orpc/client";
 import type { ContractRouterClient } from "@orpc/contract";
+import { ResponseValidationPlugin } from "@orpc/contract/plugins";
 import { OpenAPILink } from "@orpc/openapi-client/fetch";
 import { createTanstackQueryUtils } from "@orpc/tanstack-query";
 import { env } from "../env";
@@ -15,6 +16,7 @@ const link = new OpenAPILink(httpContract, {
       credentials: "include",
     });
   },
+  plugins: [new ResponseValidationPlugin(httpContract)], // re-coerces types defined by zod (e.g. z.coerce.date())
 });
 
 const client: ContractRouterClient<typeof httpContract> = createORPCClient(link);
