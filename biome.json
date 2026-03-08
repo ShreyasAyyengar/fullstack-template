@@ -42,7 +42,8 @@
         "noMagicNumbers": "warn",
         "noUselessElse": "warn",
         "noNegationElse": "off",
-        "useConsistentArrowReturn": "warn"
+        "useConsistentArrowReturn": "warn",
+        "useImportType": "warn"
       },
       "suspicious": {
         "useAwait": "warn",
