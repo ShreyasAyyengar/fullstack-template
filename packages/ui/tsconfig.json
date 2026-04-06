@@ -1,7 +1,6 @@
 {
   "extends": "@fullstack-template/typescript-config/react-library.json",
   "compilerOptions": {
-    "baseUrl": ".",
     "paths": {
       "@fullstack-template/shad-ui/*": ["./src/*"]
     }
