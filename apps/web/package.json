@@ -10,7 +10,7 @@
     "check-types": "bun run next typegen && bun run tsgo --noEmit"
   },
   "dependencies": {
-    "@better-auth/electron": "v1.5.0-beta.13",
+    "@better-auth/electron": "1.5.6",
     "@fullstack-template/api": "workspace:*",
     "@fullstack-template/contracts": "workspace:*",
     "@fullstack-template/shad-ui": "workspace:*",
@@ -22,7 +22,7 @@
     "@tanstack/react-query": "^5.90.21",
     "better-auth": "^1.5.0-beta.16",
     "framer-motion": "^12.34.2",
-    "lucide-react": "^0.562.0",
+    "lucide-react": "^1.7.0",
     "next": "^16.1.6",
     "nuqs": "^2.8.8",
     "react": "^19.2.4",
@@ -33,8 +33,7 @@
   "devDependencies": {
     "@fullstack-template/typescript-config": "workspace:*",
     "@types/node": "^22.19.11",
-    "@types/react": "19.2.2",
-    "@types/react-dom": "19.2.2",
-    "typescript": "5.9.2"
+    "@types/react": "19.2.14",
+    "@types/react-dom": "19.2.3"
   }
 }
