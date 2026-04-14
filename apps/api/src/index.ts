@@ -21,6 +21,18 @@ const apiPrefix = isDevelopment ? "/api" : undefined;
 const authRoute = isDevelopment ? "/api/auth*" : "/auth*";
 const apiRoute = isDevelopment ? "/api*" : "*";
 
+// Run Bun GC every 1 hour
+const ONE_HOUR = 60 * 60 * 1000;
+
+setInterval(() => {
+  try {
+    Bun.gc(true); // true = force full GC
+    logger.info("Manual GC triggered");
+  } catch (error) {
+    logger.error({ error }, "GC trigger failed");
+  }
+}, ONE_HOUR);
+
 new Elysia()
   .use(
     cors({
