@@ -2,6 +2,8 @@ FROM oven/bun:latest
 
 WORKDIR /app
 
+RUN apt-get update && apt-get install -y --no-install-recommends unzip && rm -rf /var/lib/apt/lists/*
+
 COPY . .
 
 RUN bun upgrade --canary
